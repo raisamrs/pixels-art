@@ -36,3 +36,16 @@ cursor: pointer;
 #color-4 {
   background-color: rgb(134, 219, 240);
 }
+.pixel{
+  border: 1px solid black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+}
+#pixel-board {
+  display: grid;
+  grid-template-columns: repeat(5,40px);
+  grid-template-rows: repeat(5, 40px);
+  margin-top: 90px;
+  margin-left: 30px;
+}
