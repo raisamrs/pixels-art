@@ -1,0 +1,38 @@
+#color-palette {
+display: flex;
+height: 60px;
+}
+
+body {
+  margin: 0px;
+}
+
+.color {
+  display: flex;
+  width: 60px;
+  border: 1px solid black;
+}
+
+
+#btn-change-colors{
+position: fixed;
+top: 160px;
+left: 102px ;
+cursor: pointer;
+}
+
+#color-1 {
+  background-color: rgb(236,154,175);
+}
+
+#color-2 {
+  background-color: rgb(243,204,60);
+}
+
+#color-3 {
+  background-color: rgb(152,226,209);
+}
+
+#color-4 {
+  background-color: rgb(134, 219, 240);
+}
