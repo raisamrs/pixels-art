@@ -10,6 +10,26 @@ for (let i = 0; i < 25; i += 1) {
   pixel.classList.add('pixel');
 }
 
+/* 3 - Crie uma função para selecionar uma cor na paleta de cores */
+const color1 = document.getElementById('color-1');
+const color2 = document.getElementById('color-2');
+const color3 = document.getElementById('color-3');
+const color4 = document.getElementById('color-4');
+
+let selectedColor = null;
+
+const clickedColor = (event) => {
+  if (selectedColor) {
+    selectedColor.classList.remove('selected');
+  }
+  event.target.classList.add('selected');
+  selectedColor = event.target;
+};
+
+color1.addEventListener('click', clickedColor);
+color2.addEventListener('click', clickedColor);
+color3.addEventListener('click', clickedColor);
+color4.addEventListener('click', clickedColor);
 /* function generateColorRgb(usedColors) {
   let color;
   do {
