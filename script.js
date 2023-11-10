@@ -58,10 +58,9 @@ clearBoardBtn.addEventListener('click', () => {
 });
 
 /* 6 - Adicione um botão para gerar cores aleatórias para a paleta de cores */
-const changeColorsBtn = document.createElement('input');
+const changeColorsBtn = document.createElement('button');
 changeColorsBtn.id = 'button-random-color';
-changeColorsBtn.type = 'button';
-changeColorsBtn.value = 'Cores aleatórias';
+changeColorsBtn.innerText = 'Cores aleatórias';
 document.body.appendChild(changeColorsBtn);
 
 function generateColorRgb(usedColors) {
@@ -79,10 +78,12 @@ function generateColorRgb(usedColors) {
 
 document.getElementById('button-random-color').addEventListener('click', () => {
   const usedColors = new Set();
+  const colorElements = document.querySelectorAll('.color');
 
-  for (let i = 0; i < 5; i += 1) {
+  colorElements.forEach((colorElement, i) => {
     const newColor = generateColorRgb(usedColors);
-    const uniqueColorRgb = document.getElementById(`color-${i + 1}`);
-    uniqueColorRgb.style.backgroundColor = newColor;
-  }
+    colorElement.style.backgroundColor = newColor;
+    // Adicione um identificador único ao estilo do elemento
+    colorElement.style.setProperty('--color-identifier', i);
+  });
 });
