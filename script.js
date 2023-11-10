@@ -1,3 +1,5 @@
+const arrPixelsBoard = document.getElementsByClassName('pixel');
+
 /* 2 - Adicione à página um quadro contendo 25 pixels, sendo que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel */
 
 const pixelsBoard = document.createElement('div');
@@ -32,7 +34,6 @@ color3.addEventListener('click', clickedColor);
 color4.addEventListener('click', clickedColor);
 
 /* 4 - Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores */
-const arrPixelsBoard = document.getElementsByClassName('pixel');
 
 for (let i = 0; i < arrPixelsBoard.length; i += 1) {
   arrPixelsBoard[i].addEventListener('click', (event) => {
@@ -83,7 +84,42 @@ document.getElementById('button-random-color').addEventListener('click', () => {
   colorElements.forEach((colorElement, i) => {
     const newColor = generateColorRgb(usedColors);
     colorElement.style.backgroundColor = newColor;
-    // Adicione um identificador único ao estilo do elemento
     colorElement.style.setProperty('--color-identifier', i);
   });
 });
+
+/* 7 - Crie uma função para salvar e recuperar o seu desenho atual no localStorage
+Ao recarregar a página, o quadro deve permanecer. Para isso, a cada clique em um pixel, salve a cor e a posição no localStorage. Ao recarregar a página o quadro deverá ser recuperado a partir dos dados que foram salvos no localStorage. */
+function saveDraw() {
+  const draw = {};
+
+  for (let i = 0; i < arrPixelsBoard.length; i += 1) {
+    const color = getComputedStyle(arrPixelsBoard[i]).backgroundColor;
+    draw[i] = color;
+
+    localStorage.setItem('pixelBoard', JSON.stringify(draw));
+  }
+}
+
+function recoveryDraw() {
+  const savedDraw = JSON.parse(localStorage.getItem('pixelBoard'));
+
+  if (savedDraw) {
+    const pixelsBoard2 = document.querySelectorAll('.pixel');
+    pixelsBoard2.forEach((pixel, i) => {
+      if (savedDraw[i]) {
+        pixel.style.backgroundColor = savedDraw[i];
+      }
+    });
+  }
+}
+
+pixelsBoard.addEventListener('click', (event) => {
+  const selectedColor2 = document.querySelector('.selected');
+  if (selectedColor2) {
+    event.target.style.backgroundColor = getComputedStyle(selectedColor2).backgroundColor;
+    saveDraw();
+  }
+});
+
+window.addEventListener('load', recoveryDraw);
