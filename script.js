@@ -30,6 +30,20 @@ color1.addEventListener('click', clickedColor);
 color2.addEventListener('click', clickedColor);
 color3.addEventListener('click', clickedColor);
 color4.addEventListener('click', clickedColor);
+
+/* 4 - Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores */
+const arrPixelsBoard = document.getElementsByClassName('pixel');
+
+for (let i = 0; i < arrPixelsBoard.length; i += 1) {
+  arrPixelsBoard[i].addEventListener('click', (event) => {
+    const chosenColor = document.querySelector('.selected');
+    if (chosenColor) {
+      const bgColorSelectedColor = window.getComputedStyle(chosenColor).backgroundColor;
+      event.target.style.backgroundColor = bgColorSelectedColor;
+    }
+  });
+}
+
 /* function generateColorRgb(usedColors) {
   let color;
   do {
