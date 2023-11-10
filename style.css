@@ -14,13 +14,13 @@ body {
 }
 
 
-#btn-change-colors , #clear-board {
+#button-random-color , #clear-board {
   cursor: pointer;
 }
 
-#btn-change-colors {
+#button-random-color {
   position: absolute;
-  width: 100px;
+  width: 130px;
   height: 25px;
   top: 160px;
   left: 40px;

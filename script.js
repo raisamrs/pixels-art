@@ -57,7 +57,14 @@ clearBoardBtn.addEventListener('click', () => {
   }
 });
 
-/* function generateColorRgb(usedColors) {
+/* 6 - Adicione um botão para gerar cores aleatórias para a paleta de cores */
+const changeColorsBtn = document.createElement('input');
+changeColorsBtn.id = 'button-random-color';
+changeColorsBtn.type = 'button';
+changeColorsBtn.value = 'Cores aleatórias';
+document.body.appendChild(changeColorsBtn);
+
+function generateColorRgb(usedColors) {
   let color;
   do {
     const r = Math.floor(Math.random() * 255);
@@ -70,7 +77,7 @@ clearBoardBtn.addEventListener('click', () => {
   return color;
 }
 
-document.getElementById('btn-change-colors').addEventListener('click', () => {
+document.getElementById('button-random-color').addEventListener('click', () => {
   const usedColors = new Set();
 
   for (let i = 0; i < 5; i += 1) {
@@ -78,4 +85,4 @@ document.getElementById('btn-change-colors').addEventListener('click', () => {
     const uniqueColorRgb = document.getElementById(`color-${i + 1}`);
     uniqueColorRgb.style.backgroundColor = newColor;
   }
-}); */
+});
