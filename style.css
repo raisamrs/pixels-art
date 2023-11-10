@@ -14,11 +14,24 @@ body {
 }
 
 
-#btn-change-colors {
-  position: fixed;
-  top: 160px;
-  left: 102px;
+#btn-change-colors , #clear-board {
   cursor: pointer;
+}
+
+#btn-change-colors {
+  position: absolute;
+  width: 100px;
+  height: 25px;
+  top: 160px;
+  left: 40px;
+}
+
+#clear-board {
+  width: 70px;
+  height: 25px;
+  position: absolute;
+  top: 160px;
+  left: 210px;
 }
 
 #color-1 {

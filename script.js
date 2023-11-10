@@ -44,6 +44,19 @@ for (let i = 0; i < arrPixelsBoard.length; i += 1) {
   });
 }
 
+/* 5 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco */
+
+const clearBoardBtn = document.createElement('button');
+clearBoardBtn.id = 'clear-board';
+document.body.appendChild(clearBoardBtn);
+clearBoardBtn.innerText = 'Limpar';
+
+clearBoardBtn.addEventListener('click', () => {
+  for (let i = 0; i < arrPixelsBoard.length; i += 1) {
+    arrPixelsBoard[i].style.backgroundColor = 'rgb(255, 255, 255)';
+  }
+});
+
 /* function generateColorRgb(usedColors) {
   let color;
   do {
