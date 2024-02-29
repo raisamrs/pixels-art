@@ -1,10 +1,12 @@
 const arrPixelsBoard = document.getElementsByClassName('pixel');
+const colorContainer = document.getElementById('color-container');
+const pixelBoardContainer = document.getElementById('pixel-board-container');
 
 /* 2 - Adicione à página um quadro contendo 25 pixels, sendo que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel */
 
 const pixelsBoard = document.createElement('div');
 pixelsBoard.id = 'pixel-board';
-document.body.appendChild(pixelsBoard);
+pixelBoardContainer.appendChild(pixelsBoard);
 
 for (let i = 0; i < 25; i += 1) {
   const pixel = document.createElement('div');
@@ -49,8 +51,9 @@ for (let i = 0; i < arrPixelsBoard.length; i += 1) {
 /* 5 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco */
 
 const clearBoardBtn = document.createElement('button');
-clearBoardBtn.id = 'clear-board';
-document.body.appendChild(clearBoardBtn);
+clearBoardBtn.id = 'button-clear-board';
+clearBoardBtn.className = 'btns';
+pixelBoardContainer.appendChild(clearBoardBtn);
 clearBoardBtn.innerText = 'Limpar quadro';
 
 clearBoardBtn.addEventListener('click', () => {
@@ -62,8 +65,9 @@ clearBoardBtn.addEventListener('click', () => {
 /* 6 - Adicione um botão para gerar cores aleatórias para a paleta de cores */
 const changeColorsBtn = document.createElement('button');
 changeColorsBtn.id = 'button-random-color';
-changeColorsBtn.innerText = 'Cores aleatórias';
-document.body.appendChild(changeColorsBtn);
+changeColorsBtn.className = 'btns';
+changeColorsBtn.innerText = 'Gerar cores aleatórias';
+colorContainer.appendChild(changeColorsBtn);
 
 function generateColorRgb(usedColors) {
   let color;
