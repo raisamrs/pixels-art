@@ -39,8 +39,9 @@ for (let i = 0; i < arrPixelsBoard.length; i += 1) {
   arrPixelsBoard[i].addEventListener('click', (event) => {
     const chosenColor = document.querySelector('.selected');
     if (chosenColor) {
+      const newEvent = { ...event };
       const bgColorSelectedColor = window.getComputedStyle(chosenColor).backgroundColor;
-      event.target.style.backgroundColor = bgColorSelectedColor;
+      newEvent.target.style.backgroundColor = bgColorSelectedColor;
     }
   });
 }
@@ -50,7 +51,7 @@ for (let i = 0; i < arrPixelsBoard.length; i += 1) {
 const clearBoardBtn = document.createElement('button');
 clearBoardBtn.id = 'clear-board';
 document.body.appendChild(clearBoardBtn);
-clearBoardBtn.innerText = 'Limpar';
+clearBoardBtn.innerText = 'Limpar quadro';
 
 clearBoardBtn.addEventListener('click', () => {
   for (let i = 0; i < arrPixelsBoard.length; i += 1) {
@@ -83,8 +84,9 @@ document.getElementById('button-random-color').addEventListener('click', () => {
 
   colorElements.forEach((colorElement, i) => {
     const newColor = generateColorRgb(usedColors);
-    colorElement.style.backgroundColor = newColor;
-    colorElement.style.setProperty('--color-identifier', i);
+    const newColorElement = colorElement;
+    newColorElement.style.backgroundColor = newColor;
+    newColorElement.style.setProperty('--color-identifier', i);
   });
 });
 
@@ -108,7 +110,8 @@ function recoveryDraw() {
     const pixelsBoard2 = document.querySelectorAll('.pixel');
     pixelsBoard2.forEach((pixel, i) => {
       if (savedDraw[i]) {
-        pixel.style.backgroundColor = savedDraw[i];
+        const newPixel = pixel;
+        newPixel.style.backgroundColor = savedDraw[i];
       }
     });
   }
@@ -117,7 +120,8 @@ function recoveryDraw() {
 pixelsBoard.addEventListener('click', (event) => {
   const selectedColor2 = document.querySelector('.selected');
   if (selectedColor2) {
-    event.target.style.backgroundColor = getComputedStyle(selectedColor2).backgroundColor;
+    const newEvent = event;
+    newEvent.target.style.backgroundColor = getComputedStyle(selectedColor2).backgroundColor;
     saveDraw();
   }
 });
