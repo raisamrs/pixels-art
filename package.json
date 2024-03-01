@@ -16,13 +16,11 @@
     "test": "cypress run",
     "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json . --fix",
     "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input --fix",
-    "cypress:open": "cypress open",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d src"
   },
   "dependencies": {
     "eslint-config-trybe-fundamentals": "^1.1.1",
     "gh-pages": "^6.1.1"
   },
-"homepage": "https://username.github.io/app-toot-name"
+  "homepage": "https://username.github.io/app-toot-name"
 }
