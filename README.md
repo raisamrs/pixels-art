@@ -13,3 +13,39 @@ Ah, e se você não gostou da sua arte ou quer fazer outra, é só clicar em *Li
 ## Demonstração:
 Observe o gif abaixo:
 ![Observe o gif:](https://github.com/raisamrs/pixels-art/blob/main/src/imgs/PixelsArt.gif)
+
+
+
+## Rodando localmente
+Você pode usar o [Visual Studio Code (vulgo VS Code)](https://code.visualstudio.com/download) e instalar a dependência [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+1. Clone o projeto.  Você pode fazer isso via **`HTTP`** ou via **`SSH`**.
+
+### Via HTTP:
+```bash
+  git clone https://github.com/raisamrs/pixels-art.git
+```
+### Via SSH:
+```bash
+  git clone git@github.com:raisamrs/pixels-art.git
+```
+
+2. Entre no diretório do projeto
+
+```bash
+  cd pixels-art
+```
+
+3. Abra o arquivo `src/index.html`
+
+
+4. Inicie o servidor clicando em *Go Live*, no canto inferior direito do VSCode.
+![Go Live](https://github.com/raisamrs/pixels-art/blob/main/src/imgs/Live%20Server.png)
+
+
+
+## Autora
+
+- [@raisamrs](https://www.github.com/raisamrs)
+
+
