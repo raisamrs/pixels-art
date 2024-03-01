@@ -1,10 +1,14 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+🎨 Pixels Art 🎨
+===============	
+
+## O que é?
+O **Pixels Art** é um editor de arte com pixels e sua dimensão é 5 x 5 =)
+
+## Como funciona:
+ Ele já vem com 4 cores definidas, mas calma: sempre que clicar no botão *Gerar cores aleatórias*, você terá outras 4 novas cores para usar da forma que preferir!
+
+Ah, e se você não gostou da sua arte ou quer fazer outra, é só clicar em *Limpar quadro*. ;)
+
+
+## Demonstração
+
