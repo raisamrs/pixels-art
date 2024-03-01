@@ -31,9 +31,9 @@ const clickedColor = (event) => {
   }
   event.target.classList.add('selected');
   selectedColor = event.target;
-  const colorIndex = Number(event.target.id.split('-')[1]) - 1;
-  const clickedColorBlock = colors[colorIndex];
-  selectedColorBlock.style.backgroundColor = clickedColorBlock;
+
+  const clickedColorStyle = window.getComputedStyle(event.target).backgroundColor;
+  selectedColorBlock.style.backgroundColor = clickedColorStyle;
 };
 
 color1.addEventListener('click', clickedColor);
