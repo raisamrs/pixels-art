@@ -10,5 +10,6 @@ O **Pixels Art** é um editor de arte com pixels e sua dimensão é 5 x 5 =)
 Ah, e se você não gostou da sua arte ou quer fazer outra, é só clicar em *Limpar quadro*. ;)
 
 
-## Demonstração
-
+## Demonstração:
+Observe o gif abaixo:
+![Observe o gif:](https://github.com/raisamrs/pixels-art/blob/main/src/imgs/PixelsArt.gif)
