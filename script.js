@@ -1,6 +1,7 @@
 const arrPixelsBoard = document.getElementsByClassName('pixel');
-const colorContainer = document.getElementById('color-container');
 const pixelBoardContainer = document.getElementById('pixel-board-container');
+const selectedColorBlock = document.getElementById('selected-color');
+const divBtnRandomColors = document.getElementById('btn-random-color-container');
 
 /* 2 - Adicione à página um quadro contendo 25 pixels, sendo que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel */
 
@@ -28,6 +29,8 @@ const clickedColor = (event) => {
   }
   event.target.classList.add('selected');
   selectedColor = event.target;
+  const clickedColorBlock = getComputedStyle(event.target).backgroundColor;
+  selectedColorBlock.style.backgroundColor = clickedColorBlock;
 };
 
 color1.addEventListener('click', clickedColor);
@@ -67,7 +70,7 @@ const changeColorsBtn = document.createElement('button');
 changeColorsBtn.id = 'button-random-color';
 changeColorsBtn.className = 'btns';
 changeColorsBtn.innerText = 'Gerar cores aleatórias';
-colorContainer.appendChild(changeColorsBtn);
+divBtnRandomColors.appendChild(changeColorsBtn);
 
 function generateColorRgb(usedColors) {
   let color;
