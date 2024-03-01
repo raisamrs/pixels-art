@@ -25,6 +25,7 @@ body {
 .color-container-palette {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 #color-palette {
