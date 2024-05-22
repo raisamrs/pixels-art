@@ -12,23 +12,26 @@
 <body>
   <h1 id="title">Pixels Art 🎨</h1>
   <div id="color-container">
-    <div class="color-container-palette col-12">
-    <h2 class="col-12 text-center">Paleta de cores</h2>
-      <ul id="color-palette" class="w-sm-80 h-md-80">
-        <li class="color w-sm-25 h-md-25" id="color-1"></li>
-        <li class="color w-sm-25 h-md-25" id="color-2"></li>
-        <li class="color w-sm-25 h-md-25" id="color-3"></li>
-        <li class="color w-sm-25 h-md-25" id="color-4"></li>
-      </ul>
+    <div class="row-container">
+      <div class="color-container-palette">
+        <h3 class="caption">Paleta de cores:</h3>
+        <ul id="color-palette">
+          <li class="color pixel-palette" id="color-1"></li>
+          <li class="color pixel-palette" id="color-2"></li>
+          <li class="color pixel-palette" id="color-3"></li>
+          <li class="color pixel-palette" id="color-4"></li>
+        </ul>
+      </div>
+      <div class="selected-color-container">
+        <h3 class="caption">Cor selecionada:</h3>
+        <li id="selected-color" class="color selected pixel-selected-color"></li>
+      </div>
     </div>
-    <div class="selected-color-container">
-      <h2>Cor selecionada</h2>
-      <li id="selected-color" class="color w-sm-25 selected" ></li>
-    </div>
+    <div id="btn-random-color-container"></div>
   </div>
   <div id="btn-random-color-container"></div>
   <div id="pixel-board-container">
-    <h2> Pixels Board</h2>
+    <h2 id="board-title"> Pixels Board</h2>
   </div>
 
 
