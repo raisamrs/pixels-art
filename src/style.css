@@ -12,12 +12,43 @@ body {
   font-family: Lato, sans-serif;
 }
 
-#color-container {
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+h1 {
+  font-family: Gloria Hallelujah, cursive;
+  text-align: center;
+}
+
+h2 {
+  font-family: Gloria Hallelujah, cursive;
+  text-align: center;
+}
+
+.btns {
   align-items: center;
+  background-color: rgb(12, 12, 12);
+  border-radius: 15px;
+  color: antiquewhite;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.caption {
+  font-size: 3vw;
+  font-weight: 300;
+}
+
+.color {
+  border: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  height: 10vw;
+  width: 10vw;
+}
+
+#color-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .color-container-palette {
@@ -26,46 +57,16 @@ body {
   align-items: center;
 }
 
+.color-container-palette , .selected-color-container {
+  margin: 0 2vw;
+  flex: 1;
+}
+
 #color-palette {
   display: flex;
   align-content: center;
-}
-
-#selected-color {
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-  border: 1px solid black;
-}
-
-h1 {
-  text-align: center;
-  font-family: Gloria Hallelujah, cursive;
-}
-
-h2 {
-  font-family: Gloria Hallelujah, cursive;
-}
-
-.color {
-  cursor: pointer;
-  display: flex;
-  border: 1px solid black;
-  width: 10vw;
-  height: 10vw;
-}
-
-.btns {
-  cursor: pointer;
-  background-color: rgb(12, 12, 12);
-  border-radius: 25px;
-  color: antiquewhite;
-}
-
-#btn-random-color-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0;
+  margin-bottom: 0;
 }
 
 #color-1 {
@@ -93,17 +94,195 @@ h2 {
 
 #pixel-board {
   display: grid;
+  gap: 0;
   grid-template-columns: repeat(5, 15vw);
   grid-template-rows: repeat(5, 15vw);
-  gap: 0;
 }
 
-@media ( min-width : 1280px ) and ( min-height : 800px ) {
+#pixel-board-container {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pixel-palette , .pixel-selected-color {
+  width: 10vw;
+  height: 10vw;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#selected-color {
+  align-content: center;
+  border: 1px solid black;
+  cursor: pointer;
+  display: flex;
+}
+
+.selected-color-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+  margin-bottom: 1.5vh;
+  margin-top: 2vh;
+}
+
+/* 320px a 480px = mobile */
+
+@media ( min-width : 320px ) {
+
+  #btn-clear-board {
+    margin-top: 3vh;
+  }
+
+  #btn-random-color {
+    margin-top: 3vh;
+  }
+
+  .btns {
+    width: 45vw;
+    height: 4.5vh;
+  }
 
   .color {
+    height: 6vh;
+    width: 6vh;
+  }
+
+  #color-container {
+    height: 20vh;
+  }
+
+  .color-container-palette , .selected-color-container {
+    padding-top: 2vh;
+  }
+
+  .pixel {
+    width: 8.5vh;
+    height: 8.5vh;
+  }
+
+  #pixel-board {
+    grid-template-columns: repeat(5, 8.5vh);
+    grid-template-rows: repeat(5, 8.5vh);
+  }
+
+  #pixel-board-container {
+    margin-top: 5vh;
+  }
+
+  #title {
+    font-size: 10vw;
+  }
+}
+
+/* 480px a 768px = tablet */
+
+@media ( min-width : 480px ) {
+
+  .btns {
+    width: 45vw;
+  }
+
+  .color , .pixel {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  #pixel-board {
+    grid-template-columns: repeat(5, 15vw);
+    grid-template-rows: repeat(5, 15vw);
+  }
+
+  .pixel-palette , .pixel-selected-color {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+
+/* 768px a 1024px = laptops */
+
+@media ( min-width : 768px ) {
+
+  #board-title {
+    font-size: 6vw;
+  }
+
+  #btn-random-color {
+    margin-top: 0.7vh;
+  }
+
+  #btn-random-color-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+    width: 100%;
+  }
+
+  .btns {
+    width: 25vw;
+  }
+
+  .caption {
+    font-size: 3vw;
+    font-weight: 300;
+  }
+
+  #color-container {
+    height: 18vh;
+  }
+
+  .color-container-palette , .selected-color-container {
+    padding-top: 1vw;
+  }
+
+  .pixel {
+    width: 12vw;
+    height: 12vw;
+  }
+
+  #pixel-board {
+    grid-template-columns: repeat(5, 12vw);
+    grid-template-rows: repeat(5, 12vw);
+  }
+
+  #pixel-board-container {
+    margin-top: 3vh;
+  }
+
+  .pixel-palette , .pixel-selected-color {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  #title {
+    font-size: 7vh;
+  }
+}
+
+/* 1024px a 1200px = laptops */
+
+@media ( min-width : 1024px ) {
+
+  #color-container {
+    height: 16vh;
+  }
+
+  .color {
+    border: 1px solid black;
     cursor: pointer;
     display: flex;
-    border: 1px solid black;
     width: 10vh;
     height: 10vh;
   }
@@ -116,46 +295,65 @@ h2 {
 
   #pixel-board {
     display: grid;
+    gap: 0;
     grid-template-columns: repeat(5, 10vh);
     grid-template-rows: repeat(5, 10vh);
-    gap: 0;
   }
+
+  #pixel-board-container {
+    margin-top: 1vh;
+  }
+
+  .pixel-palette , .pixel-selected-color {
+    width: 7vh;
+    height: 7vh;
+  }
+
 }
 
-@media ( min-width : 600px ) and ( max-width : 1024px ) and ( orientation : portrait ) {
+/* maior ou igual a 1200px = telas maiores, tv */
 
-  .color {
+@media ( min-width : 1280px ) {
+
+  #board-title {
+    font-size: 3vw;
+  }
+
+  .btns {
     width: 15vw;
-    height: 15vw;
   }
 
-  .pixel {
-    width: 15vw;
-    height: 15vw;
+  #color-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid blue;
+    height: 16vh;
   }
 
-  #pixel-board {
-    grid-template-columns: repeat(5, 15vw);
-    grid-template-rows: repeat(5, 15vw);
+  .color-container-palette {
+    
   }
 
-}
+  .caption {
+    font-size: 1.5vw;
+    font-weight: 300;
+    padding: 0
+  }
 
-#pixel-board-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-}
+  .color-container-palette , .selected-color-container , #btn-random-color-container {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    justify-content: flex-start;
+  }
 
-.selected-color-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  #pixel-board-container {
+    border: 2px solid purple;
+    margin-top: 1vh;
+  }
 
-#title {
-
+  .selected-color-container {
+    width: 20vw;
+  }
 }
