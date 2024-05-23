@@ -2,7 +2,7 @@ const arrPixelsBoard = document.getElementsByClassName('pixel');
 const pixelBoardContainer = document.getElementById('pixel-board-container');
 const selectedColorBlock = document.getElementById('selected-color');
 const divBtnRandomColors = document.getElementById('btn-random-color-container');
-const btnRandomColorsId = ('button-random-color');
+const btnRandomColorsId = ('btn-random-color');
 
 /* 2 - Adicione à página um quadro contendo 25 pixels, sendo que cada elemento do quadro de pixels possua 40 pixels de largura, 40 pixels de altura e seja delimitado por uma borda preta de 1 pixel */
 
@@ -57,7 +57,7 @@ for (let i = 0; i < arrPixelsBoard.length; i += 1) {
 /* 5 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco */
 
 const clearBoardBtn = document.createElement('button');
-clearBoardBtn.id = 'button-clear-board';
+clearBoardBtn.id = 'btn-clear-board';
 clearBoardBtn.className = 'btns';
 pixelBoardContainer.appendChild(clearBoardBtn);
 clearBoardBtn.innerText = 'Limpar quadro';
