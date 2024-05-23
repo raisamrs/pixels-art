@@ -35,6 +35,7 @@ h2 {
 .caption {
   font-size: 3vw;
   font-weight: 300;
+  text-align: center;
 }
 
 .color {
@@ -51,15 +52,15 @@ h2 {
   flex-direction: column;
 }
 
-.color-container-palette {
+.palette-color-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.color-container-palette , .selected-color-container {
-  margin: 0 2vw;
-  flex: 1;
+.palette-color-container , .selected-color-container {
+  margin: 0 5vw;
+  border: 1px dashed darkslateblue;
 }
 
 #color-palette {
@@ -115,7 +116,7 @@ h2 {
 .row-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
@@ -155,6 +156,10 @@ h2 {
     height: 4.5vh;
   }
 
+  .caption {
+    font-size: 4.5vw;
+  }
+
   .color {
     height: 6vh;
     width: 6vh;
@@ -164,7 +169,7 @@ h2 {
     height: 20vh;
   }
 
-  .color-container-palette , .selected-color-container {
+  .palette-color-container , .selected-color-container {
     padding-top: 2vh;
   }
 
@@ -243,7 +248,7 @@ h2 {
     height: 18vh;
   }
 
-  .color-container-palette , .selected-color-container {
+  .palette-color-container , .selected-color-container {
     padding-top: 1vw;
   }
 
@@ -309,51 +314,83 @@ h2 {
     height: 7vh;
   }
 
+  .palette-color-container {
+    border: 2px dashed red;
+  }
+
 }
 
 /* maior ou igual a 1200px = telas maiores, tv */
 
 @media ( min-width : 1280px ) {
 
+  /* Título do quadro */
   #board-title {
     font-size: 3vw;
   }
 
+  /* Botões */
   .btns {
+    width: 15vw;
+    font-size: 2vh;
+  }
+
+  /* Container do botão de cor */
+  #btn-random-color-container {
+    border: 2px dashed pink; /* Apenas para visualização */
+    margin: 0 2vw;
     width: 15vw;
   }
 
+  /* Legendas */
+  .caption {
+    font-size: 1.5vw;
+    font-weight: 300;
+    padding: 0;
+  }
+
+  /* Container de cores */
   #color-container {
     display: flex;
     flex-direction: row;
     border: 1px solid blue;
     height: 16vh;
+    width: 100%;
+    align-items: center;
   }
 
-  .color-container-palette {
-    
+  .palette-color-container {
+    border: 2px dashed green; /* Apenas para visualização */
+    width: 29.4vw;
   }
 
-  .caption {
-    font-size: 1.5vw;
-    font-weight: 300;
-    padding: 0
-  }
-
-  .color-container-palette , .selected-color-container , #btn-random-color-container {
-    border: 1px solid red;
+  /* Ajustes para os containers */
+  .palette-color-container , .selected-color-container , #btn-random-color-container {
     display: flex;
     flex-direction: row;
     gap: 1vw;
     justify-content: flex-start;
   }
 
+  /* Container do quadro de pixels */
   #pixel-board-container {
     border: 2px solid purple;
     margin-top: 1vh;
   }
 
+  .pixel-palette , .pixel-selected-color {
+    width: 7vh;
+    height: 7vh;
+  }
+
+  .row-container {
+    border: 1px darkblue;
+    width: 80vw;
+  }
+
+  /* Container da cor selecionada */
   .selected-color-container {
-    width: 20vw;
+    border: 2px dashed orange; /* Apenas para visualização */
+    width: 16vw; /* Largura específica */
   }
 }
