@@ -12,7 +12,7 @@ Ah, e se você não gostou da sua arte ou quer fazer outra, é só clicar em *Li
 
 ## Demonstração:
 Observe o gif abaixo:
-![Observe o gif:](https://github.com/raisamrs/pixels-art/blob/main/src/imgs/Pixels%20Art.gif)
+![Observe o gif:](https://github.com/raisamrs/pixels-art/blob/main/src/imgs/Pixels%20Art%20Demo.gif)
 
 
 
