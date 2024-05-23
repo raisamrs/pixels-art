@@ -52,16 +52,6 @@ h2 {
   flex-direction: column;
 }
 
-.palette-color-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.palette-color-container , .selected-color-container {
-  margin: 0 5vw;
-  border: 1px dashed darkslateblue;
-}
 
 #color-palette {
   display: flex;
@@ -84,6 +74,16 @@ h2 {
 
 #color-4 {
   background-color: rgb(134, 219, 240);
+}
+
+.palette-color-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.palette-color-container , .selected-color-container {
+  margin: 0 5vw;
 }
 
 .pixel {
@@ -111,13 +111,6 @@ h2 {
 .pixel-palette , .pixel-selected-color {
   width: 10vw;
   height: 10vw;
-}
-
-.row-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
 }
 
 #selected-color {
@@ -185,6 +178,13 @@ h2 {
 
   #pixel-board-container {
     margin-top: 5vh;
+  }
+
+  .row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
   }
 
   #title {
@@ -314,9 +314,7 @@ h2 {
     height: 7vh;
   }
 
-  .palette-color-container {
-    border: 2px dashed red;
-  }
+
 
 }
 
@@ -337,7 +335,6 @@ h2 {
 
   /* Container do botão de cor */
   #btn-random-color-container {
-    border: 2px dashed pink; /* Apenas para visualização */
     margin: 0 2vw;
     width: 15vw;
   }
@@ -347,20 +344,25 @@ h2 {
     font-size: 1.5vw;
     font-weight: 300;
     padding: 0;
+    max-width: 12vw;
   }
 
   /* Container de cores */
   #color-container {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    border: 1px solid blue;
     height: 16vh;
-    width: 100%;
-    align-items: center;
+    margin: auto;
+    width: 80%;
+  }
+
+  #color-palette {
+    max-width: 17vw;
+    margin: 0;
   }
 
   .palette-color-container {
-    border: 2px dashed green; /* Apenas para visualização */
     width: 29.4vw;
   }
 
@@ -369,12 +371,12 @@ h2 {
     display: flex;
     flex-direction: row;
     gap: 1vw;
+    margin-left: 0;
     justify-content: flex-start;
   }
 
   /* Container do quadro de pixels */
   #pixel-board-container {
-    border: 2px solid purple;
     margin-top: 1vh;
   }
 
@@ -383,14 +385,8 @@ h2 {
     height: 7vh;
   }
 
-  .row-container {
-    border: 1px darkblue;
-    width: 80vw;
-  }
-
   /* Container da cor selecionada */
   .selected-color-container {
-    border: 2px dashed orange; /* Apenas para visualização */
-    width: 16vw; /* Largura específica */
+    width: 16.7vw; /* Largura específica */
   }
 }
