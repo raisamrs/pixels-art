@@ -13,9 +13,22 @@ body {
   margin: 0;
 }
 
+footer {
+  height: 3rem;
+  margin: 1rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: rgb(12, 12, 12);
+  display: inline-block;
+  margin: 0 ! important;
+  padding: 0 ! important;
+}
+
 h1 {
   border-bottom: 2px dashed rgb(12, 12, 12);
-  color: red;
   font-family: Gloria Hallelujah, cursive;
   text-align: center;
   background-color: rgb(171, 181, 195);
