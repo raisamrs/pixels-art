@@ -95,15 +95,15 @@ h2 {
 .pixel {
   border: 1px solid black;
   background-color: white;
-  width: 15vw;
-  height: 15vw;
+  width: 7vw;
+  height: 7vw;
 }
 
 #pixel-board {
   display: grid;
   gap: 0;
-  grid-template-columns: repeat(5, 15vw);
-  grid-template-rows: repeat(5, 15vw);
+  grid-template-columns: repeat(10, 7vw);
+  grid-template-rows: repeat(10, 7vw);
 }
 
 #pixel-board-container {
@@ -173,13 +173,13 @@ h2 {
   }
 
   .pixel {
-    width: 8.5vh;
-    height: 8.5vh;
+    width: 3vh;
+    height: 3vh;
   }
 
   #pixel-board {
-    grid-template-columns: repeat(5, 8.5vh);
-    grid-template-rows: repeat(5, 8.5vh);
+    grid-template-columns: repeat(10, 3vh);
+    grid-template-rows: repeat(10, 3vh);
   }
 
   #pixel-board-container {
@@ -206,19 +206,28 @@ h2 {
     width: 45vw;
   }
 
-  .color , .pixel {
+  .color {
     width: 15vw;
     height: 15vw;
   }
 
+  .pixel {
+    width: 7.5vw;
+    height: 7.5vw;
+  }
+
   #pixel-board {
-    grid-template-columns: repeat(5, 15vw);
-    grid-template-rows: repeat(5, 15vw);
+    grid-template-columns: repeat(10, 7.5vw);
+    grid-template-rows: repeat(10, 7.5vw);
+  }
+
+  #pixel-board-container {
+    margin-top: 1rem;
   }
 
   .pixel-palette , .pixel-selected-color {
-    width: 10vw;
-    height: 10vw;
+    width: 8vw;
+    height: 8vw;
   }
 }
 
@@ -227,26 +236,27 @@ h2 {
 @media ( min-width : 768px ) {
 
   #board-title {
-    font-size: 6vw;
+    font-size: 2rem;
   }
 
   #btn-random-color {
-    margin-top: 0.7vh;
+    margin: 0 1vh;
   }
 
   #btn-random-color-container {
     display: flex;
     justify-content: center;
-    margin-top: 1vh;
+    margin: 1.5rem 0;
     width: 100%;
   }
 
   .btns {
+    height: 3vw;
     width: 25vw;
   }
 
   .caption {
-    font-size: 3vw;
+    font-size: 1rem;
     font-weight: 300;
   }
 
@@ -259,26 +269,26 @@ h2 {
   }
 
   .pixel {
-    width: 12vw;
-    height: 12vw;
+    width: 7vw;
+    height: 7vw;
   }
 
   #pixel-board {
-    grid-template-columns: repeat(5, 12vw);
-    grid-template-rows: repeat(5, 12vw);
+    grid-template-columns: repeat(10, 7vw);
+    grid-template-rows: repeat(10, 7vw);
   }
 
   #pixel-board-container {
-    margin-top: 3vh;
+    margin-top: 1rem;
   }
 
   .pixel-palette , .pixel-selected-color {
-    width: 6vw;
-    height: 6vw;
+    width: 4vw;
+    height: 4vw;
   }
 
   #title {
-    font-size: 7vh;
+    font-size: 2rem;
   }
 }
 
@@ -287,7 +297,7 @@ h2 {
 @media ( min-width : 1024px ) {
 
   #board-title {
-    font-size: 6vw;
+    font-size: 2rem;
   }
 
   .btns {
@@ -307,16 +317,16 @@ h2 {
   }
 
   .pixel {
-    width : 10vh;
-    height : 10vh;
+    width : 5vh;
+    height : 5vh;
     gap: 0;
   }
 
   #pixel-board {
     display: grid;
     gap: 0;
-    grid-template-columns: repeat(5, 10vh);
-    grid-template-rows: repeat(5, 10vh);
+    grid-template-columns: repeat(10, 5vh);
+    grid-template-rows: repeat(10, 5vh);
   }
 
   #pixel-board-container {
@@ -326,6 +336,10 @@ h2 {
   .pixel-palette , .pixel-selected-color {
     width: 5vh;
     height: 5vh;
+  }
+
+  #title {
+    font-size: 3rem;
   }
 
 }
@@ -345,10 +359,14 @@ h2 {
     font-size: 2vh;
   }
 
+  #btn-random-color {
+    width: 100%;
+  }
+
   /* Container do botão de cor */
   #btn-random-color-container {
     margin: 0 2vw;
-    width: 15vw;
+    width: 25vw;
   }
 
   /* Legendas */
@@ -387,14 +405,27 @@ h2 {
     justify-content: flex-start;
   }
 
+  .pixel {
+    width : 5vh;
+    height : 5vh;
+    gap: 0;
+  }
+
+  #pixel-board {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(10, 5vh);
+    grid-template-rows: repeat(10, 5vh);
+  }
+
   /* Container do quadro de pixels */
   #pixel-board-container {
     margin-top: 1vh;
   }
 
   .pixel-palette , .pixel-selected-color {
-    width: 7vh;
-    height: 7vh;
+    width: 4vh;
+    height: 4vh;
   }
 
   /* Container da cor selecionada */

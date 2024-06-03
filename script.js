@@ -10,7 +10,7 @@ const pixelsBoard = document.createElement('div');
 pixelsBoard.id = 'pixel-board';
 pixelBoardContainer.appendChild(pixelsBoard);
 
-for (let i = 0; i < 25; i += 1) {
+for (let i = 0; i < 100; i += 1) {
   const pixel = document.createElement('div');
   pixelsBoard.appendChild(pixel);
   pixel.classList.add('pixel');
