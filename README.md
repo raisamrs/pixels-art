@@ -55,4 +55,9 @@ Acesse a aplicação em https://raisamrs.github.io/pixels-art/
 > [!NOTE]
 > A versão atual difere em algumas mudanças implementadas única e exclusivamente por mim em relação à proposta original do projeto. Abaixo, seguem elas:
 * aumento da dimensão board para 10 x 10;
-* 
+* estilização da página;
+* adição do campo "cor selecionada";
+* mudança do texto do botão "cores aleatórias" para "gerar cores aleatórias";
+* mudança do texto do botão "limpar" para "limpar quadro";
+* ancoragem do repositório no footer da aplicação;
+* responsividade da aplicação.
