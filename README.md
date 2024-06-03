@@ -45,8 +45,14 @@ Você pode usar o [Visual Studio Code (vulgo VS Code)](https://code.visualstudio
 ## Versão Deploy:
 Acesse a aplicação em https://raisamrs.github.io/pixels-art/
 
-## Autora
+## Autores:
+- [@trybe](https://github.com/tryber)
 
 - [@raisamrs](https://www.github.com/raisamrs)
 
 
+## ⚠️ Observação:
+> [!NOTE]
+> A versão atual difere em algumas mudanças implementadas única e exclusivamente por mim em relação à proposta original do projeto. Abaixo, seguem elas:
+* aumento da dimensão board para 10 x 10;
+* 
